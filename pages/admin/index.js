@@ -21,11 +21,9 @@ const Admin = (props) => {
             <h1 className={styles.title}>
                 Admin Page....
                 {props.data.map(adminUser => (
-                    <div className={styles.btnUser}>
+                    <div className={styles.btnUser} key={adminUser.username}>
                         <Link href={`/admin/${adminUser.id}`}>
-                            <a>
-                                <h3 key={adminUser.id}>{adminUser.name}</h3>
-                            </a>
+                            <a><h3>{adminUser.name}</h3></a>
                         </Link>
                     </div>
 
